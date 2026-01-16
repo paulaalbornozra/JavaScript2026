@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revista en línea sobre la nueva película de Spider-Man">
+    <meta name="keywords" content="Spider-Man, película, Marvel, superhéroes, cine">
+    <title>Spider-Verse Magazine - Todo sobre la nueva película de Spider-Man</title>
+    
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Variables de color */
+        :root {
+            --color-primario: #e31b23;
+            --color-secundario: #0066cc;
+            --color-fondo: #f5f5f5;
+            --color-texto: #333;
+            --color-blanco: #ffffff;
+            --color-gris: #666;
+            --color-gris-claro: #e0e0e0;
+            --color-negro: #000000;
+        }
+        
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
+        }
+        
+        #contenedor-principal {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--color-blanco);
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--color-primario), #c41e3a);
+            color: var(--color-blanco);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        /* Navegación */
+        nav {
+            background-color: var(--color-negro);
+            padding: 0;
+        }
+        
+        .menu-principal ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .menu-principal li {
+            margin: 0;
+        }
+        
+        .menu-principal a {
+            display: block;
+            color: var(--color-blanco);
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .menu-principal a:hover {
+            background-color: var(--color-primario);
+        }
+        
+        /* Main */
+        main {
+            padding: 20px;
+        }
+        
+        /* Secciones */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: var(--color-blanco);
+            border-radius: 8px;
+        }
+        
+        section h2 {
+            color: var(--color-primario);
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--color-primario);
+            padding-bottom: 10px;
+        }
+        
+        section h3 {
+            color: var(--color-secundario);
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        section h4 {
+            color: var(--color-gris);
+            font-size: 1.2em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(to right, #1a1a1a, #333);
+            color: var(--color-blanco);
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section h2 {
+            color: var(--color-blanco);
+            border-bottom: 3px solid var(--color-primario);
+        }
+        
+        /* Artículos */
+        article {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-left: 4px solid var(--color-primario);
+            border-radius: 4px;
+        }
+        
+        article header {
+            background: none;
+            color: var(--color-texto);
+            padding: 0;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+        
+        article header h3 {
+            color: var(--color-primario);
+            margin-bottom: 10px;
+        }
+        
+        article time {
+            color: var(--color-gris);
+            font-size: 0.9em;
+        }
+        
+        article address {
+            font-style: normal;
+            color: var(--color-gris);
+            font-size: 0.9em;
+        }
+        
+        /* Blockquote */
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 5px solid var(--color-secundario);
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        blockquote footer {
+            text-align: right;
+            margin-top: 10px;
+            font-style: normal;
+            color: var(--color-gris);
+        }
+        
+        /* Aside */
+        aside {
+            background-color: #fffacd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid #ffd700;
+        }
+        
+        aside h2, aside h3 {
+            color: #b8860b;
+        }
+        
+        /* Tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: var(--color-blanco);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 15px;
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        thead {
+            background-color: #333;
+            color: var(--color-blanco);
+        }
+        
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tbody tr:hover {
+            background-color: #e8f4f8;
+        }
+        
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--color-gris-claro);
+        }
+        
+        tfoot {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        tfoot td {
+            padding: 15px;
+        }
+        
+        /* Listas */
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Figuras */
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .imagen-placeholder {
+            background-color: var(--color-gris-claro);
+            padding: 60px;
+            border: 2px dashed var(--color-gris);
+            border-radius: 8px;
+        }
+        
+        figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--color-gris);
+        }
+        
+        /* Galería */
+        .contenedor-imagenes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .contenedor-imagenes figure {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        
+        /* Formulario */
+        .seccion-formulario {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        
+        fieldset {
+            border: 2px solid var(--color-gris-claro);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        legend {
+            font-weight: bold;
+            color: var(--color-primario);
+            font-size: 1.2em;
+            padding: 0 10px;
+        }
+        
+        .campo-formulario {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--color-texto);
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        input[type="color"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid var(--color-gris-claro);
+            border-radius: 4px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-secundario);
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* Radio buttons y checkboxes */
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+            width: auto;
+        }
+        
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            display: inline;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        
+        .campo-formulario label:has(input[type="radio"]),
+        .campo-formulario label:has(input[type="checkbox"]) {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        /* Range input */
+        input[type="range"] {
+            width: calc(100% - 60px);
+            display: inline-block;
+        }
+        
+        output {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            color: var(--color-primario);
+        }
+        
+        /* File input */
+        input[type="file"] {
+            padding: 5px;
+            border: 2px dashed var(--color-gris-claro);
+        }
+        
+        small {
+            display: block;
+            margin-top: 5px;
+            color: var(--color-gris);
+            font-size: 0.85em;
+        }
+        
+        /* Botones */
+        button {
+            padding: 12px 30px;
+            margin: 10px 10px 10px 0;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        button[type="submit"] {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #c41e3a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        button[type="reset"] {
+            background-color: var(--color-gris);
+            color: var(--color-blanco);
+        }
+        
+        button[type="reset"]:hover {
+            background-color: #555;
+        }
+        
+        .botones-formulario {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid var(--color-gris-claro);
+        }
+        
+        /* Abbr */
+        abbr {
+            color: var(--color-primario);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Info adicional */
+        .info-adicional {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 5px solid var(--color-secundario);
+        }
+        
+        .info-adicional h3 {
+            color: var(--color-secundario);
+            margin-bottom: 15px;
+        }
+        
+        .info-adicional ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .info-adicional li {
+            padding: 8px 0;
+            border-bottom: 1px solid #d0e8f0;
+        }
+        
+        .info-adicional li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Notas de tabla */
+        .notas-tabla {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .notas-tabla h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        /* Meter */
+        meter {
+            width: 200px;
+            height: 20px;
+        }
+        
+        /* Details y Summary */
+        details {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--color-secundario);
+            padding: 10px;
+        }
+        
+        summary:hover {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+        
+        /* DL, DT, DD */
+        dl {
+            margin: 15px 0;
+        }
+        
+        dt {
+            font-weight: bold;
+            margin-top: 15px;
+            color: var(--color-primario);
+        }
+        
+        dd {
+            margin-left: 20px;
+            margin-top: 5px;
+            padding-left: 20px;
+            border-left: 3px solid var(--color-gris-claro);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: var(--color-blanco);
+            padding: 40px 20px 20px;
+            margin-top: 40px;
+        }
+        
+        .contenedor-footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .columna-footer h3 {
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        footer nav ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        footer nav li {
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: var(--color-blanco);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: var(--color-primario);
+        }
+        
+        .copyright {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            margin-top: 20px;
+        }
+        
+        .copyright nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .menu-principal ul {
+                flex-direction: column;
+            }
+            
+            .menu-principal a {
+                padding: 12px;
+            }
+            
+            section h2 {
+                font-size: 1.5em;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            .contenedor-imagenes {
+                flex-direction: column;
+            }
+            
+            .hero-section {
+                padding: 20px;
+            }
+            
+            .contenedor-footer {
+                grid-template-columns: 1fr;
+            }
+            
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        article, section {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        /* Enlaces */
+        a {
+            color: var(--color-secundario);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--color-fondo);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-primario);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c41e3a;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Contenedor principal de la página -->
+    <div id="contenedor-principal">
+        
+        <!-- Encabezado principal del sitio -->
+        <header>
+            <div class="logo-container">
+                <h1>Spider-Verse Magazine</h1>
+                <p>Tu fuente definitiva de información sobre Spider-Man</p>
+            </div>
+            
+            <!-- Navegación principal -->
+            <nav>
+                <div class="menu-principal">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#criticas">Críticas</a></li>
+                        <li><a href="#peliculas">Películas</a></li>
+                        <li><a href="#entrevistas">Entrevistas</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#formulario-contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Contenido principal -->
+        <main>
+            
+            <!-- Sección hero/destacada -->
+            <section id="inicio">
+                <div class="hero-section">
+                    <header>
+                        <h2>Spider-Man: Across the Spider-Verse</h2>
+                        <p>La esperada secuela que rompe todas las expectativas</p>
+                    </header>
+                    
+                    <article>
+                        <div class="informacion-estreno">
+                            <h3>Estreno Mundial</h3>
+                            <p><time datetime="2024-06-02">2 de junio de 2024</time></p>
+                            <p>Miles Morales regresa en una aventura épica a través del multiverso que cambiará todo lo que conocemos sobre Spider-Man.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección de noticias -->
+            <section id="noticias">
+                <div class="seccion-noticias">
+                    <header>
+                        <h2>Últimas Noticias</h2>
+                    </header>
+                    
+                    <div class="contenedor-articulos">
+                        <article>
+                            <div class="articulo-noticia">
+                                <header>
+                                    <h3>Récord de taquilla en el primer fin de semana</h3>
+                                    <p>Publicado el <time datetime="2024-06-05">5 de junio de 2024</time></p>
+                                    <address>Por <a href="mailto:redaccion@spiderverse.com">María González</a></address>
+                                </header>
+                                
+                                <div class="contenido-noticia">
+                                    <p>La nueva película de Spider-Man ha superado todas las expectativas recaudando más de 120 millones de dólares en su primer fin de semana en cines.</p>
+                                    
+                                    <aside>
+                                        <p><strong>Dato curioso:</strong> Esta cifra supera el récord anterior de películas animadas.</p>
+                                    </aside>
+                                </div>
+                                
+                                <footer>
+                                    <p>Categorías: <a href="#taquilla">Taquilla</a>, <a href="#records">Récords</a></p>
+                                </footer>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div class="articulo-noticia">
+                                <header>
+                                    <h3>Confirmada tercera película de la saga</h3>
+                                    <p>Publicado el <time datetime="2024-06-10">10 de junio de 2024</time></p>
+                                    <address>Por <a href="mailto:redaccion@spiderverse.com">Carlos Ramírez</a></address>
+                                </header>
+                                
+                                <div class="contenido-noticia">
+                                    <p>Sony Pictures ha confirmado oficialmente que habrá una tercera entrega que concluirá la trilogía del Spider-Verse.</p>
+                                    
+                                    <blockquote>
+                                        <p>"Esta es solo el principio de algo mucho más grande. Los fans no van a creer lo que viene."</p>
+                                        <footer>— Phil Lord, productor ejecutivo</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de críticas -->
+            <section id="criticas">
+                <div class="seccion-criticas">
+                    <header>
+                        <h2>Críticas y Reseñas</h2>
+                    </header>
+                    
+                    <article>
+                        <div class="articulo-critica">
+                            <header>
+                                <h3>Una obra maestra visual</h3>
+                                <p>Calificación: <meter value="9.5" min="0" max="10">9.5 de 10</meter></p>
+                                <address>Por <a href="mailto:critica@spiderverse.com">Laura Martínez</a></address>
+                            </header>
+                            
+                            <div class="contenido-critica">
+                                <p>Spider-Man: Across the Spider-Verse no es solo una película, es una experiencia cinematográfica que redefine lo que puede ser una película animada de superhéroes.</p>
+                                
+                                <div class="aspectos-positivos">
+                                    <h4>Aspectos destacados:</h4>
+                                    <ul>
+                                        <li>Animación revolucionaria</li>
+                                        <li>Narrativa compleja y emocionante</li>
+                                        <li>Desarrollo de personajes excepcional</li>
+                                        <li>Banda sonora impactante</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="aspectos-mejorar">
+                                    <h4>Aspectos a mejorar:</h4>
+                                    <ul>
+                                        <li>Ritmo ligeramente irregular en el segundo acto</li>
+                                        <li>Puede resultar abrumadora para quienes no vieron la primera</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: Tabla de películas de Spider-Man -->
+            <section id="peliculas">
+                <div class="seccion-peliculas">
+                    <header>
+                        <h2>Todas las Películas de Spider-Man</h2>
+                        <p>Un recorrido completo por la filmografía del trepamuros</p>
+                    </header>
+                    
+                    <div class="contenedor-tabla">
+                        <table border="1" cellpadding="10" cellspacing="0">
+                            <caption>
+                                <strong>Filmografía completa de Spider-Man (1977-2024)</strong>
+                            </caption>
+                            
+                            <thead>
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Título</th>
+                                    <th>Director</th>
+                                    <th>Protagonista</th>
+                                    <th>Tipo</th>
+                                    <th>Recaudación Mundial</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <!-- Trilogía de Sam Raimi -->
+                                <tr>
+                                    <td>2002</td>
+                                    <td>Spider-Man</td>
+                                    <td>Sam Raimi</td>
+                                    <td>Tobey Maguire</td>
+                                    <td>Acción real</td>
+                                    <td>$825 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2004</td>
+                                    <td>Spider-Man 2</td>
+                                    <td>Sam Raimi</td>
+                                    <td>Tobey Maguire</td>
+                                    <td>Acción real</td>
+                                    <td>$789 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2007</td>
+                                    <td>Spider-Man 3</td>
+                                    <td>Sam Raimi</td>
+                                    <td>Tobey Maguire</td>
+                                    <td>Acción real</td>
+                                    <td>$895 millones</td>
+                                </tr>
+                                
+                                <!-- Saga de The Amazing Spider-Man -->
+                                <tr>
+                                    <td>2012</td>
+                                    <td>The Amazing Spider-Man</td>
+                                    <td>Marc Webb</td>
+                                    <td>Andrew Garfield</td>
+                                    <td>Acción real</td>
+                                    <td>$758 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2014</td>
+                                    <td>The Amazing Spider-Man 2</td>
+                                    <td>Marc Webb</td>
+                                    <td>Andrew Garfield</td>
+                                    <td>Acción real</td>
+                                    <td>$709 millones</td>
+                                </tr>
+                                
+                                <!-- MCU Spider-Man -->
+                                <tr>
+                                    <td>2016</td>
+                                    <td>Captain America: Civil War</td>
+                                    <td>Anthony y Joe Russo</td>
+                                    <td>Tom Holland</td>
+                                    <td>Acción real (Aparición)</td>
+                                    <td>$1,155 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2017</td>
+                                    <td>Spider-Man: Homecoming</td>
+                                    <td>Jon Watts</td>
+                                    <td>Tom Holland</td>
+                                    <td>Acción real</td>
+                                    <td>$880 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2018</td>
+                                    <td>Avengers: Infinity War</td>
+                                    <td>Anthony y Joe Russo</td>
+                                    <td>Tom Holland</td>
+                                    <td>Acción real (Aparición)</td>
+                                    <td>$2,052 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td>
+                                    <td>Avengers: Endgame</td>
+                                    <td>Anthony y Joe Russo</td>
+                                    <td>Tom Holland</td>
+                                    <td>Acción real (Aparición)</td>
+                                    <td>$2,799 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td>
+                                    <td>Spider-Man: Far From Home</td>
+                                    <td>Jon Watts</td>
+                                    <td>Tom Holland</td>
+                                    <td>Acción real</td>
+                                    <td>$1,132 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td>Spider-Man: No Way Home</td>
+                                    <td>Jon Watts</td>
+                                    <td>Tom Holland</td>
+                                    <td>Acción real</td>
+                                    <td>$1,921 millones</td>
+                                </tr>
+                                
+                                <!-- Películas animadas del Spider-Verse -->
+                                <tr>
+                                    <td>2018</td>
+                                    <td>Spider-Man: Into the Spider-Verse</td>
+                                    <td>Bob Persichetti, Peter Ramsey, Rodney Rothman</td>
+                                    <td>Shameik Moore (voz)</td>
+                                    <td>Animación</td>
+                                    <td>$384 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2023</td>
+                                    <td>Spider-Man: Across the Spider-Verse</td>
+                                    <td>Joaquim Dos Santos, Kemp Powers, Justin K. Thompson</td>
+                                    <td>Shameik Moore (voz)</td>
+                                    <td>Animación</td>
+                                    <td>$690 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>Spider-Man: Beyond the Spider-Verse</td>
+                                    <td>Joaquim Dos Santos</td>
+                                    <td>Shameik Moore (voz)</td>
+                                    <td>Animación (Próximamente)</td>
+                                    <td>Por estrenar</td>
+                                </tr>
+                                
+                                <!-- Spin-offs del universo Sony -->
+                                <tr>
+                                    <td>2018</td>
+                                    <td>Venom</td>
+                                    <td>Ruben Fleischer</td>
+                                    <td>Tom Hardy</td>
+                                    <td>Acción real (Spin-off)</td>
+                                    <td>$856 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td>Venom: Let There Be Carnage</td>
+                                    <td>Andy Serkis</td>
+                                    <td>Tom Hardy</td>
+                                    <td>Acción real (Spin-off)</td>
+                                    <td>$506 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>Morbius</td>
+                                    <td>Daniel Espinosa</td>
+                                    <td>Jared Leto</td>
+                                    <td>Acción real (Spin-off)</td>
+                                    <td>$167 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>Madame Web</td>
+                                    <td>S.J. Clarkson</td>
+                                    <td>Dakota Johnson</td>
+                                    <td>Acción real (Spin-off)</td>
+                                    <td>$100 millones</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>Kraven the Hunter</td>
+                                    <td>J.C. Chandor</td>
+                                    <td>Aaron Taylor-Johnson</td>
+                                    <td>Acción real (Spin-off)</td>
+                                    <td>Por estrenar</td>
+                                </tr>
+                            </tbody>
+                            
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5"><strong>Total de películas principales:</strong></td>
+                                    <td><strong>19 películas</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <div class="notas-tabla">
+                        <h3>Notas importantes:</h3>
+                        <ul>
+                            <li>Las cifras de recaudación son aproximadas y pueden variar según la fuente</li>
+                            <li>Se incluyen películas donde Spider-Man tiene aparición significativa en el MCU</li>
+                            <li>Los spin-offs son parte del Sony's Spider-Man Universe (SSU)</li>
+                            <li>Películas anteriores a 2002 (serie de TV) no están incluidas en esta tabla</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de entrevistas -->
+            <section id="entrevistas">
+                <div class="seccion-entrevistas">
+                    <header>
+                        <h2>Entrevistas Exclusivas</h2>
+                    </header>
+                    
+                    <article>
+                        <div class="articulo-entrevista">
+                            <header>
+                                <h3>Conversamos con Shameik Moore</h3>
+                                <p>La voz detrás de Miles Morales</p>
+                                <time datetime="2024-06-08">8 de junio de 2024</time>
+                            </header>
+                            
+                            <div class="contenido-entrevista">
+                                <p>Tuvimos la oportunidad de hablar con Shameik Moore sobre su experiencia dando vida nuevamente a Miles Morales.</p>
+                                
+                                <details>
+                                    <summary>Leer entrevista completa</summary>
+                                    <dl>
+                                        <dt><strong>Revista:</strong> ¿Qué significa para ti regresar como Miles?</dt>
+                                        <dd>Moore: Es un honor increíble. Miles ha crecido tanto, y yo también he crecido con él.</dd>
+                                        
+                                        <dt><strong>Revista:</strong> ¿Cuál fue la escena más difícil de grabar?</dt>
+                                        <dd>Moore: Definitivamente las escenas emocionales del tercer acto. Tuve que conectar con la vulnerabilidad de Miles de una manera muy profunda.</dd>
+                                    </dl>
+                                </details>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sección de galería -->
+            <section id="galeria">
+                <div class="seccion-galeria">
+                    <header>
+                        <h2>Galería de Imágenes</h2>
+                    </header>
+                    
+                    <div class="contenedor-imagenes">
+                        <figure>
+                            <div class="imagen-placeholder">
+                                <p>[Imagen de Miles Morales en acción]</p>
+                            </div>
+                            <figcaption>Miles Morales en acción</figcaption>
+                        </figure>
+                        
+                        <figure>
+                            <div class="imagen-placeholder">
+                                <p>[Imagen del equipo de Spider-People]</p>
+                            </div>
+                            <figcaption>El equipo de Spider-People</figcaption>
+                        </figure>
+                        
+                        <figure>
+                            <div class="imagen-placeholder">
+                                <p>[Imagen del multiverso]</p>
+                            </div>
+                            <figcaption>Escena del multiverso</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NUEVA SECCIÓN: Formulario de Contacto -->
+            <section id="formulario-contacto">
+                <div class="seccion-formulario">
+                    <header>
+                        <h2>Contáctanos</h2>
+                        <p>¿Tienes alguna pregunta, sugerencia o quieres colaborar con nosotros? ¡Nos encantaría saber de ti!</p>
+                    </header>
+                    
+                    <div class="contenedor-formulario">
+                        <fieldset>
+                            <legend>Formulario de Contacto</legend>
+                            
+                            <!-- Información Personal -->
+                            <fieldset>
+                                <legend>Información Personal</legend>
+                                
+                                <div class="campo-formulario">
+                                    <label for="nombre">Nombre completo: <abbr title="requerido">*</abbr></label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez" size="40" maxlength="100">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="email">Correo electrónico: <abbr title="requerido">*</abbr></label>
+                                    <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com" size="40">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" size="20">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="edad">Edad:</label>
+                                    <input type="number" id="edad" name="edad" min="13" max="120" placeholder="18">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="pais">País:</label>
+                                    <select id="pais" name="pais">
+                                        <option value="">Selecciona tu país</option>
+                                        <option value="chile">Chile</option>
+                                        <option value="argentina">Argentina</option>
+                                        <option value="colombia">Colombia</option>
+                                        <option value="mexico">México</option>
+                                        <option value="españa">España</option>
+                                        <option value="peru">Perú</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Tipo de Consulta -->
+                            <fieldset>
+                                <legend>Motivo de contacto</legend>
+                                
+                                <div class="campo-formulario">
+                                    <label for="motivo">Tipo de consulta: <abbr title="requerido">*</abbr></label>
+                                    <select id="motivo" name="motivo" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="consulta-general">Consulta general</option>
+                                        <option value="sugerencia">Sugerencia de contenido</option>
+                                        <option value="colaboracion">Propuesta de colaboración</option>
+                                        <option value="error">Reportar error en el sitio</option>
+                                        <option value="publicidad">Publicidad y patrocinios</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Preferencias de Spider-Man -->
+                            <fieldset>
+                                <legend>Tus preferencias sobre Spider-Man (opcional)</legend>
+                                
+                                <div class="campo-formulario">
+                                    <p>¿Cuál es tu Spider-Man favorito?</p>
+                                    <label>
+                                        <input type="radio" name="spiderman-favorito" value="tobey">
+                                        Tobey Maguire
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="spiderman-favorito" value="andrew">
+                                        Andrew Garfield
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="spiderman-favorito" value="tom">
+                                        Tom Holland
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="spiderman-favorito" value="miles">
+                                        Miles Morales (Animación)
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="spiderman-favorito" value="todos">
+                                        Todos me gustan por igual
+                                    </label>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <p>¿Qué tipo de contenido te interesa? (puedes seleccionar varios)</p>
+                                    <label>
+                                        <input type="checkbox" name="contenido[]" value="noticias">
+                                        Noticias y actualidad
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="contenido[]" value="criticas">
+                                        Críticas de películas
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="contenido[]" value="entrevistas">
+                                        Entrevistas exclusivas
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="contenido[]" value="comics">
+                                        Contenido sobre cómics
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="contenido[]" value="teoria">
+                                        Teorías y análisis
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="contenido[]" value="merchandising">
+                                        Merchandising y coleccionables
+                                    </label>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="pelicula-favorita">¿Cuál es tu película favorita de Spider-Man?</label>
+                                    <input type="text" id="pelicula-favorita" name="pelicula-favorita" placeholder="Ej: Spider-Man 2" size="50">
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Mensaje -->
+                            <fieldset>
+                                <legend>Tu mensaje</legend>
+                                
+                                <div class="campo-formulario">
+                                    <label for="asunto">Asunto: <abbr title="requerido">*</abbr></label>
+                                    <input type="text" id="asunto" name="asunto" required placeholder="Escribe el asunto de tu mensaje" size="60" maxlength="200">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="mensaje">Mensaje: <abbr title="requerido">*</abbr></label>
+                                    <textarea id="mensaje" name="mensaje" required rows="8" cols="60" placeholder="Escribe tu mensaje aquí... (mínimo 10 caracteres)" minlength="10" maxlength="1000"></textarea>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="archivo">Adjuntar archivo (opcional):</label>
+                                    <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx,.jpg,.png">
+                                    <small>Formatos permitidos: PDF, DOC, DOCX, JPG, PNG (máx. 5MB)</small>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Suscripción -->
+                            <fieldset>
+                                <legend>Newsletter</legend>
+                                
+                                <div class="campo-formulario">
+                                    <label>
+                                        <input type="checkbox" name="newsletter" value="si">
+                                        Deseo suscribirme al newsletter semanal de Spider-Verse Magazine
+                                    </label>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="frecuencia">Frecuencia preferida de correos:</label>
+                                    <select id="frecuencia" name="frecuencia">
+                                        <option value="diaria">Diaria</option>
+                                        <option value="semanal" selected>Semanal</option>
+                                        <option value="quincenal">Quincenal</option>
+                                        <option value="mensual">Mensual</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Calificación del sitio -->
+                            <fieldset>
+                                <legend>Tu opinión sobre nuestro sitio</legend>
+                                
+                                <div class="campo-formulario">
+                                    <label for="calificacion">¿Cómo calificarías nuestro sitio web?</label>
+                                    <input type="range" id="calificacion" name="calificacion" min="1" max="10" value="5" step="1">
+                                    <output for="calificacion">5</output> / 10
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="fecha-visita">¿Cuándo nos visitaste por primera vez?</label>
+                                    <input type="date" id="fecha-visita" name="fecha-visita" min="2018-01-01" max="2024-12-31">
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label for="color-favorito">Color favorito para el diseño del sitio:</label>
+                                    <input type="color" id="color-favorito" name="color-favorito" value="#e31b23">
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Términos y condiciones -->
+                            <fieldset>
+                                <legend>Confirmación</legend>
+                                
+                                <div class="campo-formulario">
+                                    <label>
+                                        <input type="checkbox" name="terminos" required>
+                                        Acepto los <a href="#terminos">términos y condiciones</a> y la <a href="#privacidad">política de privacidad</a> <abbr title="requerido">*</abbr>
+                                    </label>
+                                </div>
+                                
+                                <div class="campo-formulario">
+                                    <label>
+                                        <input type="checkbox" name="mayor-edad" required>
+                                        Confirmo que soy mayor de 13 años <abbr title="requerido">*</abbr>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Botones de acción -->
+                            <div class="botones-formulario">
+                                <button type="submit">Enviar mensaje</button>
+                                <button type="reset">Limpiar formulario</button>
+                            </div>
+                            
+                            <p><small><abbr title="requerido">*</abbr> Campos obligatorios</small></p>
+                            
+                        </fieldset>
+                    </div>
+                    
+                    <div class="info-adicional">
+                        <h3>Otras formas de contacto</h3>
+                        <ul>
+                            <li><strong>Email directo:</strong> <a href="mailto:contacto@spiderverse.com">contacto@spiderverse.com</a></li>
+                            <li><strong>Teléfono:</strong> <a href="tel:+56912345678">+56 9 1234 5678</a></li>
+                            <li><strong>WhatsApp:</strong> <a href="https://wa.me/56912345678">+56 9 1234 5678</a></li>
+                            <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 - 18:00 hrs (GMT-3)</li>
+                        </ul>
+                        
+                        <p><strong>Tiempo de respuesta:</strong> Generalmente respondemos en menos de 24 horas hábiles.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de datos curiosos -->
+            <aside>
+                <div class="sidebar-datos">
+                    <header>
+                        <h2>Sabías que...</h2>
+                    </header>
+                    
+                    <article>
+                        <div class="datos-curiosos">
+                            <h3>Datos curiosos sobre la película</h3>
+                            <ul>
+                                <li>Se utilizaron más de 240 animadores para crear la película</li>
+                                <li>Cada frame fue pintado a mano digitalmente</li>
+                                <li>Aparecen más de 280 variantes de Spider-Man</li>
+                                <li>La película tardó más de 4 años en completarse</li>
+                                <li>Into the Spider-Verse ganó el Oscar a Mejor Película Animada en 2019</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+
+        </main>
+
+        <!-- Pie de página -->
+        <footer>
+            <div class="contenedor-footer">
+                <div class="columna-footer">
+                    <section>
+                        <h3>Sobre Nosotros</h3>
+                        <p>Spider-Verse Magazine es la revista digital líder en noticias, críticas y contenido exclusivo sobre el universo de Spider-Man.</p>
+                    </section>
+                </div>
+                
+                <div class="columna-footer">
+                    <section>
+                        <h3>Síguenos</h3>
+                        <nav>
+                            <ul>
+                                <li><a href="#twitter">Twitter</a></li>
+                                <li><a href="#instagram">Instagram</a></li>
+                                <li><a href="#facebook">Facebook</a></li>
+                                <li><a href="#youtube">YouTube</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+                
+                <div class="columna-footer">
+                    <section id="contacto">
+                        <h3>Contacto</h3>
+                        <address>
+                            <p>Email: <a href="mailto:info@spiderverse.com">info@spiderverse.com</a></p>
+                            <p>Teléfono: <a href="tel:+56912345678">+56 9 1234 5678</a></p>
+                        </address>
+                    </section>
+                </div>
+                
+                <div class="copyright">
+                    <section>
+                        <p><small>&copy; 2024 Spider-Verse Magazine. Todos los derechos reservados.</small></p>
+                        <nav>
+                            <ul>
+                                <li><a href="#privacidad">Política de Privacidad</a></li>
+                                <li><a href="#terminos">Términos de Uso</a></li>
+                            </ul>
+                        </nav>
+                    </section>
+                </div>
+            </div>
+        </footer>
+        
+    </div> <!-- Fin del contenedor principal -->
+
+</body>
+</html>

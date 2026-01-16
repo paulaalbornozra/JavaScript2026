@@ -1,0 +1,98 @@
+/*==========================================
+Hoja de estilos index2 Spider-Verse Magazine
+==========================================*/
+
+/*Reset y configuración base*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Colores principales*/
+    --color-primario: #e31b23;
+    --color-secundario: #1f4788;
+    --color-acento: #ffd700;
+    --color-oscuro: #1a1a1a;
+    --color-gris: #666;
+    --ccolor-gris-claro: #ccc;
+    --color-blanco: #fff;
+
+    /*Tipografía*/
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-titulos: 'Arial Black', Gadget, sans-serif;
+    --tamaño-texto-base: 16px;
+
+    /*Espaciado*/
+    --espaciado-pequenio: 0.5rem;
+    --espaciado-medio: 1rem;
+    --espaciado-grande: 2rem;
+
+
+    /*Sombras*/
+    --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --sombra-intermedia: 0 3px 6px rgba(0, 0, 0, 0.15);
+    --sombra-fuerte: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: var(--tamaño-texto-base);
+    line-height: 1.6;
+    color: var(--color-oscuro);
+    background-color: var(--color-blanco);
+}
+
+/*CONTENEDOR PRINCIPAL*/
+contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra-intermedia);
+}
+
+/*Header principal*/
+header {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    color: var(--color-blanco);
+    padding: var(--espaciado-grande) var(--espaciado-medio);
+}
+
+/*Navegación*/
+nav {
+    background-color: var(--color-oscuro);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--sombra-fuerte)    ;
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu-principal li {
+    margin: 0;
+}
+
+.menu-principal a {
+    display: block;
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.menu-principal a:hover {
+    background-color: var(--color-primario);
+    transform: translateY(-2px);
+}

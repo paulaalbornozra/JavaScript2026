@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1{
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.descripcion{
+    text-align: center;
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 14px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus{
+    outline: none;
+    border-color: #667eea;
+}
+
+button{
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+button:active{
+    transform: translateY(0);
+}
+
+.resultado{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #a0a5aa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    border-right: 4px solid #667eea;
+}
+
+.resultado.oculto{
+    display: none;
+}
+
+.resultado h2{
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#mensaje{
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.consola{
+    margin-top: 30px;
+    padding: 15px;
+    background: #263238;
+    border-radius: 10px;
+}
+
+.consola h3{
+    text-align: center;
+    color: #4caf50;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.consola .info{
+    color: #90a4ae;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
